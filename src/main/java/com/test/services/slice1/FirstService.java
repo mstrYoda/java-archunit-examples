@@ -1,4 +1,6 @@
-package com.test.services;
+package com.test.services.slice1;
+
+import com.test.services.slice2.SecondService;
 
 public class FirstService {
     private SecondService secondService;

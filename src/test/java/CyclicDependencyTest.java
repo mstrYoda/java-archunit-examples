@@ -7,11 +7,11 @@ import org.junit.runner.RunWith;
 import static com.tngtech.archunit.library.dependencies.SlicesRuleDefinition.slices;
 
 @RunWith(ArchUnitRunner.class)
-@AnalyzeClasses(packages = "com.test")
+@AnalyzeClasses(packages = "com.test.services")
 public class CyclicDependencyTest {
 
     @ArchTest
-    public static final ArchRule rule = slices().matching("..services..")
-            .should().beFreeOfCycles();
+    public static final ArchRule rule = slices().matching("")
+            .should().notDependOnEachOther();
 
 }
